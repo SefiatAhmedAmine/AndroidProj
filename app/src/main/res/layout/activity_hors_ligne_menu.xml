@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#91CEFF"
+    android:background="#FFEB3B"
     tools:context=".HorsLigne_menu">
 
     <Button
@@ -33,17 +33,17 @@
         android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="261dp"
-        android:layout_marginLeft="261dp"
+        android:layout_marginStart="160dp"
+        android:layout_marginLeft="160dp"
         android:text="Menu"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="16dp" />
+        tools:layout_editor_absoluteY="502dp" />
 
     <TextView
         android:id="@+id/textView1"
         android:layout_width="409dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="219dp"
+        android:layout_marginTop="164dp"
         android:gravity="center"
         android:text="PLAY"
         android:textAlignment="center"
