@@ -12,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
 import java.util.ArrayList;
 
 public class HeuristicRuleBasesAI extends AppCompatActivity implements View.OnClickListener {
@@ -32,7 +33,7 @@ public class HeuristicRuleBasesAI extends AppCompatActivity implements View.OnCl
     Button reset;                               // layout reset button
     int playerOneScoreCount, playerTwoScoreCount;// score keeping variables
     int movesCounter;
-    boolean activeRound;          // iterate rounds btw player and computer
+    boolean activeRound, activePlayer;          // iterate rounds btw player and computer
 
     // a line with +30 means Player win / with -30 means Computer win
     int [] linesValues = {0,0,0,0,0,0,0,0};
@@ -51,7 +52,16 @@ public class HeuristicRuleBasesAI extends AppCompatActivity implements View.OnCl
     final Thread r = new Thread(){
         @Override
         public void run() {
-            playRobot();
+            if (!activePlayer)
+                playRobot();
+        }
+    };
+    final Thread replay = new Thread(){
+        @Override
+        public void run() {
+            if (endGame(1) || endGame(-1)){
+                playAgain();
+            }
         }
     };
 
@@ -69,6 +79,7 @@ public class HeuristicRuleBasesAI extends AppCompatActivity implements View.OnCl
             cases[i].setOnClickListener(this);
         }
         activeRound = true;
+        activePlayer = true;
         movesCounter = 0;
         playerOneScoreCount = 0;
         playerTwoScoreCount = 0;
@@ -78,6 +89,7 @@ public class HeuristicRuleBasesAI extends AppCompatActivity implements View.OnCl
             @Override
             public void onClick(View v) {
                 activeRound = true;
+                activePlayer = true;
                 movesCounter = 0;
                 playerOneScoreCount = 0;
                 playerTwoScoreCount = 0;
@@ -149,6 +161,7 @@ public class HeuristicRuleBasesAI extends AppCompatActivity implements View.OnCl
 
         this.movesCounter = 0;
         this.activeRound = !this.activeRound;
+        this.activePlayer = this.activeRound;
         for (int i = 0; i < this.cases.length; i++){
             this.casesState[i] = 0;
             this.casesValues[i] = 0;
@@ -261,17 +274,20 @@ public class HeuristicRuleBasesAI extends AppCompatActivity implements View.OnCl
      * @param player
      *  update the object after a move.
      */
+
     protected void playMove(int move, int player){
         // get the chosen move View
         View w = this.cases[move];
-        if (player > 0) {
+        if (player > 0 && this.activePlayer) {
             w.setBackgroundResource(R.drawable.cross);
             this.casesState[move] = 1;
         }
-        else {
+        else if (player < 0){
             w.setBackgroundResource(R.drawable.circle);
             this.casesState[move] = 2;
         }
+        else return;
+
         for (int i = 0; i<this.affectedLines[move].length; i++){
             this.linesValues[affectedLines[move][i]] += player*10;
         }
@@ -299,6 +315,7 @@ public class HeuristicRuleBasesAI extends AppCompatActivity implements View.OnCl
             }
         }
         this.movesCounter++;
+        this.activePlayer = !this.activePlayer;
         return;
     }
 
@@ -341,14 +358,7 @@ public class HeuristicRuleBasesAI extends AppCompatActivity implements View.OnCl
             }
         }
         Log.i("Computer Move", Integer.toString(move));
-        handler.postDelayed(new Thread(){
-            @Override
-            public void run() {
-                if (endGame(1) || endGame(-1)){
-                    playAgain();
-                }
-            }
-        }, 1000);
+        handler.postDelayed(replay, 250);
     }
 
     /**
@@ -369,18 +379,12 @@ public class HeuristicRuleBasesAI extends AppCompatActivity implements View.OnCl
             return;
         }
         playMove(caseNum, 1);
-        handler.postDelayed(new Thread(){
-            @Override
-            public void run() {
-                if (endGame(1) || endGame(-1)){
-                    playAgain();
-                }
-            }
-        }, 1000);
         // Player Move: End
+        handler.postDelayed(replay, 250);
         //-------------------------------------------------------------
 
         // Computer Move: Start
+
 
         handler.postDelayed(r, 500);
 
