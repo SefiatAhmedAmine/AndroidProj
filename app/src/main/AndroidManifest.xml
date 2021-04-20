@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Androidprj">
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".HeuristicRuleBasesAI"
+            android:exported="true" ></activity>
+        <activity android:name=".MainActivity" />
         <activity
             android:name=".HorsLigne_menu"
             android:exported="true" />
