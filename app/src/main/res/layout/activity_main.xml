@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#343e56"
+    android:background="#FEE227"
     tools:context=".MainActivity">
 
     <RelativeLayout
@@ -14,7 +14,7 @@
         android:id="@+id/btn5"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:background="#343e56">
+        android:background="#FEE227">
 
         <ImageView
             android:layout_width="match_parent"
@@ -32,7 +32,7 @@
         android:layout_centerInParent="true"
         android:id="@+id/btn4"
         android:layout_toLeftOf="@id/btn5"
-        android:background="#343e56">
+        android:background="#FEE227">
 
         <ImageView
             android:layout_width="match_parent"
@@ -49,7 +49,7 @@
         android:layout_centerInParent="true"
         android:id="@+id/btn6"
         android:layout_toRightOf="@id/btn5"
-        android:background="#343e56">
+        android:background="#FEE227">
 
         <ImageView
             android:layout_width="match_parent"
@@ -125,7 +125,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:background="#343e56">
+        android:background="#FEE227">
 
         <ImageView
             android:layout_width="match_parent"
@@ -147,7 +147,7 @@
 
         android:layout_toLeftOf="@id/btn8"
 
-        android:background="#343e56">
+        android:background="#FEE227">
 
         <ImageView
             android:layout_width="match_parent"
@@ -169,7 +169,7 @@
 
         android:layout_toRightOf="@id/btn8"
 
-        android:background="#343e56">
+        android:background="#FEE227">
 
         <ImageView
             android:layout_width="match_parent"
@@ -198,9 +198,9 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Score X :- 0"
+            android:text="Player : 0"
             android:textSize="30sp"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textStyle="bold"
             android:id="@+id/ScoreX"
             >
@@ -209,9 +209,9 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Score Y :- 0"
+            android:text="Robot : 0"
             android:textSize="30sp"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textStyle="bold"
             android:id="@+id/ScoreY"
             >
@@ -230,7 +230,7 @@
         android:layout_marginBottom="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:background="#343e56">
+        android:background="#FEE227">
 
         <ImageView
             android:layout_width="match_parent"
@@ -250,7 +250,7 @@
         android:layout_above="@id/btn5"
         android:layout_marginBottom="20dp"
         android:layout_toLeftOf="@id/btn2"
-        android:background="#343e56">
+        android:background="#FEE227">
 
         <ImageView
             android:id="@+id/buttonImage1"
@@ -271,7 +271,7 @@
         android:layout_above="@id/btn5"
         android:layout_marginBottom="20dp"
         android:layout_toRightOf="@id/btn2"
-        android:background="#343e56">
+        android:background="#FEE227">
 
         <ImageView
             android:layout_width="match_parent"
