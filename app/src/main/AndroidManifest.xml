@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Androidprj">
-        <activity android:name=".MainActivity">
+        <activity android:name=".twoplayers" android:exported="true"></activity>
+        <activity android:name=".Robo">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

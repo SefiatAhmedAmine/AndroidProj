@@ -4,7 +4,6 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
-import android.icu.text.BreakIterator;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -13,11 +12,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.concurrent.TimeUnit;
+import java.util.Random;
 
 import static java.lang.Thread.sleep;
 
-public class MainActivity extends AppCompatActivity {
+public class Robo extends AppCompatActivity {
 
     ImageView button1,button2,button3,button4,button5,button6,button7,button8,button9;
     private String startGame="X";
@@ -97,15 +96,17 @@ public class MainActivity extends AppCompatActivity {
                         i++;
                         c1=1;
                     }
-                    choosePlayer();
-                    winningGame();
-                    handler.postDelayed(r, 1000);
-                    winningGame();
+                    if(winningGame()!=1){
+                        choosePlayer();
+                        handler.postDelayed(r, 1000);
+                    }
+
+                    /*winningGame();*/
 
                 }
                 else
                 {
-                    Toast.makeText(MainActivity.this,"Button Already Pressed",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Robo.this,"Button Already Pressed",Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -133,16 +134,16 @@ public class MainActivity extends AppCompatActivity {
                         i++;
                         c2=1;
                     }
-                    choosePlayer();
-                    winningGame();
-                    handler.postDelayed(r, 1000);
-
-                    winningGame();
+                    if(winningGame()!=1){
+                        choosePlayer();
+                        handler.postDelayed(r, 1000);
+                    }
+                    /*winningGame();*/
 
                 }
                 else
                 {
-                    Toast.makeText(MainActivity.this,"Button Already Pressed",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Robo.this,"Button Already Pressed",Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -170,17 +171,17 @@ public class MainActivity extends AppCompatActivity {
                         i++;
                         c3=1;
                     }
-                    choosePlayer();
-                    winningGame();
-                    handler.postDelayed(r, 1000);
-
-                    winningGame();
+                    if(winningGame()!=1){
+                        choosePlayer();
+                        handler.postDelayed(r, 1000);
+                    }
+                    /*winningGame();*/
 
 
                 }
                 else
                 {
-                    Toast.makeText(MainActivity.this,"Button Already Pressed",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Robo.this,"Button Already Pressed",Toast.LENGTH_SHORT).show();
                 }
 
 
@@ -212,17 +213,17 @@ public class MainActivity extends AppCompatActivity {
                         i++;
                         c4=1;
                     }
-                    choosePlayer();
-                    winningGame();
-                    handler.postDelayed(r, 1000);
-
-                    winningGame();
+                    if(winningGame()!=1){
+                        choosePlayer();
+                        handler.postDelayed(r, 1000);
+                    }
+                    /*winningGame();*/
 
 
                 }
                 else
                 {
-                    Toast.makeText(MainActivity.this,"Button Already Pressed",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Robo.this,"Button Already Pressed",Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -249,16 +250,16 @@ public class MainActivity extends AppCompatActivity {
                         i++;
                         c5=1;
                     }
-                    choosePlayer();
-                    winningGame();
-                    handler.postDelayed(r, 1000);
-
-                    winningGame();
+                    if(winningGame()!=1){
+                        choosePlayer();
+                        handler.postDelayed(r, 1000);
+                    }
+                    /*winningGame();*/
 
                 }
                 else
                 {
-                    Toast.makeText(MainActivity.this,"Button Already Pressed",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Robo.this,"Button Already Pressed",Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -286,17 +287,17 @@ public class MainActivity extends AppCompatActivity {
                         i++;
                         c6=1;
                     }
-                    choosePlayer();
-                    winningGame();
-                    handler.postDelayed(r, 1000);
-
-                    winningGame();
+                    if(winningGame()!=1){
+                        choosePlayer();
+                        handler.postDelayed(r, 1000);
+                    }
+                    /*winningGame();*/
 
 
                 }
                 else
                 {
-                    Toast.makeText(MainActivity.this,"Button Already Pressed",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Robo.this,"Button Already Pressed",Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -324,17 +325,17 @@ public class MainActivity extends AppCompatActivity {
                         i++;
                         c7=1;
                     }
-                    choosePlayer();
-                    winningGame();
-                    handler.postDelayed(r, 1000);
-
-                    winningGame();
+                    if(winningGame()!=1){
+                        choosePlayer();
+                        handler.postDelayed(r, 1000);
+                    }
+                    /*winningGame();*/
 
 
                 }
                 else
                 {
-                    Toast.makeText(MainActivity.this,"Button Already Pressed",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Robo.this,"Button Already Pressed",Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -360,16 +361,15 @@ public class MainActivity extends AppCompatActivity {
                         i++;
                         c8=1;
                     }
-                    choosePlayer();
-                    winningGame();
-                    handler.postDelayed(r, 1000);
-
-                    winningGame();
-
+                    if(winningGame()!=1){
+                        choosePlayer();
+                        handler.postDelayed(r, 1000);
+                    }
+                    /*winningGame();*/
                 }
                 else
                 {
-                    Toast.makeText(MainActivity.this,"Button Already Pressed",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Robo.this,"Button Already Pressed",Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -396,16 +396,16 @@ public class MainActivity extends AppCompatActivity {
                         i++;
                         c9=1;
                     }
-                    choosePlayer();
-                    winningGame();
-                    handler.postDelayed(r, 1000);
-
-                    winningGame();
+                    if(winningGame()!=1){
+                        choosePlayer();
+                        handler.postDelayed(r, 1000);
+                    }
+                    /*winningGame();*/
 
                 }
                 else
                 {
-                    Toast.makeText(MainActivity.this,"Button Already Pressed",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Robo.this,"Button Already Pressed",Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -418,7 +418,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    private void winningGame()
+    private int winningGame()
     {
 
 
@@ -426,7 +426,7 @@ public class MainActivity extends AppCompatActivity {
         {
 
             AlertDialog.Builder builder=new AlertDialog.Builder(this);
-            builder.setMessage("Player X Wins").setCancelable(false).setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+            builder.setMessage("Player Wins").setCancelable(false).setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     button1.setImageDrawable(null);
@@ -445,7 +445,8 @@ public class MainActivity extends AppCompatActivity {
             AlertDialog alertDialog=builder.create();
             alertDialog.show();
             xCount++;
-            scorex.setText("Score X :- "+String.valueOf(xCount));
+            scorex.setText("Player : "+String.valueOf(xCount));
+            return 1;
         }
 
 
@@ -453,7 +454,7 @@ public class MainActivity extends AppCompatActivity {
         {
 
             AlertDialog.Builder builder=new AlertDialog.Builder(this);
-            builder.setMessage("Player X Wins").setCancelable(false).setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+            builder.setMessage("Player Wins").setCancelable(false).setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     button1.setImageDrawable(null);
@@ -472,7 +473,8 @@ public class MainActivity extends AppCompatActivity {
             AlertDialog alertDialog=builder.create();
             alertDialog.show();
             xCount++;
-            scorex.setText("Score X :- "+String.valueOf(xCount));
+            scorex.setText("Player : "+String.valueOf(xCount));
+            return 1;
 
         }
 
@@ -481,7 +483,7 @@ public class MainActivity extends AppCompatActivity {
         {
 
             AlertDialog.Builder builder=new AlertDialog.Builder(this);
-            builder.setMessage("Player X Wins").setCancelable(false).setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+            builder.setMessage("Player Wins").setCancelable(false).setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     button1.setImageDrawable(null);
@@ -500,7 +502,8 @@ public class MainActivity extends AppCompatActivity {
             AlertDialog alertDialog=builder.create();
             alertDialog.show();
             xCount++;
-            scorex.setText("Score X :- "+String.valueOf(xCount));
+            scorex.setText("Player : "+String.valueOf(xCount));
+            return 1;
 
         }
 
@@ -508,7 +511,7 @@ public class MainActivity extends AppCompatActivity {
         {
 
             AlertDialog.Builder builder=new AlertDialog.Builder(this);
-            builder.setMessage("Player X Wins").setCancelable(false).setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+            builder.setMessage("Player Wins").setCancelable(false).setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     button1.setImageDrawable(null);
@@ -527,9 +530,9 @@ public class MainActivity extends AppCompatActivity {
             AlertDialog alertDialog=builder.create();
             alertDialog.show();
             xCount++;
-            scorex.setText("Score X :- "+String.valueOf(xCount));
+            scorex.setText("Player : "+String.valueOf(xCount));
 
-
+            return 1;
 
         }
 
@@ -538,7 +541,7 @@ public class MainActivity extends AppCompatActivity {
         {
 
             AlertDialog.Builder builder=new AlertDialog.Builder(this);
-            builder.setMessage("Player X Wins").setCancelable(false).setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+            builder.setMessage("Player Wins").setCancelable(false).setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     button1.setImageDrawable(null);
@@ -557,9 +560,9 @@ public class MainActivity extends AppCompatActivity {
             AlertDialog alertDialog=builder.create();
             alertDialog.show();
             xCount++;
-            scorex.setText("Score X :- "+String.valueOf(xCount));
+            scorex.setText("Player : "+String.valueOf(xCount));
 
-
+            return 1;
         }
 
 
@@ -567,7 +570,7 @@ public class MainActivity extends AppCompatActivity {
         {
 
             AlertDialog.Builder builder=new AlertDialog.Builder(this);
-            builder.setMessage("Player X Wins").setCancelable(false).setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+            builder.setMessage("Player Wins").setCancelable(false).setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     button1.setImageDrawable(null);
@@ -586,8 +589,8 @@ public class MainActivity extends AppCompatActivity {
             AlertDialog alertDialog=builder.create();
             alertDialog.show();
             xCount++;
-            scorex.setText("Score X :- "+String.valueOf(xCount));
-
+            scorex.setText("Player : "+String.valueOf(xCount));
+            return 1;
         }
 
 
@@ -595,7 +598,7 @@ public class MainActivity extends AppCompatActivity {
         {
 
             AlertDialog.Builder builder=new AlertDialog.Builder(this);
-            builder.setMessage("Player X Wins").setCancelable(false).setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+            builder.setMessage("Player Wins").setCancelable(false).setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     button1.setImageDrawable(null);
@@ -614,15 +617,15 @@ public class MainActivity extends AppCompatActivity {
             AlertDialog alertDialog=builder.create();
             alertDialog.show();
             xCount++;
-            scorex.setText("Score X :- "+String.valueOf(xCount));
-
+            scorex.setText("Player : "+String.valueOf(xCount));
+            return 1;
         }
 
         else  if((b3==1) && (b5==1) && (b7==1))
         {
 
             AlertDialog.Builder builder=new AlertDialog.Builder(this);
-            builder.setMessage("Player X Wins").setCancelable(false).setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+            builder.setMessage("Player Wins").setCancelable(false).setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     button1.setImageDrawable(null);
@@ -641,8 +644,8 @@ public class MainActivity extends AppCompatActivity {
             AlertDialog alertDialog=builder.create();
             alertDialog.show();
             xCount++;
-            scorex.setText("Score X :- "+String.valueOf(xCount));
-
+            scorex.setText("Player : "+String.valueOf(xCount));
+            return 1;
 
         }
 
@@ -650,7 +653,7 @@ public class MainActivity extends AppCompatActivity {
         {
 
             AlertDialog.Builder builder=new AlertDialog.Builder(this);
-            builder.setMessage("Player O Wins").setCancelable(false).setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+            builder.setMessage("Robot Wins").setCancelable(false).setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     button1.setImageDrawable(null);
@@ -669,14 +672,14 @@ public class MainActivity extends AppCompatActivity {
             AlertDialog alertDialog=builder.create();
             alertDialog.show();
             oCount++;
-            scoreo.setText("Score Y :- "+String.valueOf(oCount));
-
+            scoreo.setText("Robot : "+String.valueOf(oCount));
+            return 1;
         }
         else  if((b4==0) && (b5==0) && (b6==0))
         {
 
             AlertDialog.Builder builder=new AlertDialog.Builder(this);
-            builder.setMessage("Player O Wins").setCancelable(false).setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+            builder.setMessage("Robot Wins").setCancelable(false).setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     button1.setImageDrawable(null);
@@ -695,7 +698,8 @@ public class MainActivity extends AppCompatActivity {
             AlertDialog alertDialog=builder.create();
             alertDialog.show();
             oCount++;
-            scoreo.setText("Score Y :- "+String.valueOf(oCount));
+            scoreo.setText("Robot : "+String.valueOf(oCount));
+            return 1;
         }
 
 
@@ -704,7 +708,7 @@ public class MainActivity extends AppCompatActivity {
         {
 
             AlertDialog.Builder builder=new AlertDialog.Builder(this);
-            builder.setMessage("Player O Wins").setCancelable(false).setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+            builder.setMessage("Robot Wins").setCancelable(false).setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     button1.setImageDrawable(null);
@@ -723,7 +727,8 @@ public class MainActivity extends AppCompatActivity {
             AlertDialog alertDialog=builder.create();
             alertDialog.show();
             oCount++;
-            scoreo.setText("Score Y :- "+String.valueOf(oCount));
+            scoreo.setText("Robot : "+String.valueOf(oCount));
+            return 1;
 
         }
 
@@ -732,7 +737,7 @@ public class MainActivity extends AppCompatActivity {
         {
 
             AlertDialog.Builder builder=new AlertDialog.Builder(this);
-            builder.setMessage("Player O Wins").setCancelable(false).setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+            builder.setMessage("Robot Wins").setCancelable(false).setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     button1.setImageDrawable(null);
@@ -751,14 +756,15 @@ public class MainActivity extends AppCompatActivity {
             AlertDialog alertDialog=builder.create();
             alertDialog.show();
             oCount++;
-            scoreo.setText("Score Y :- "+String.valueOf(oCount));
+            scoreo.setText("Robot : "+String.valueOf(oCount));
+            return 1;
         }
 
         else  if((b2==0) && (b5==0) && (b8==0))
         {
 
             AlertDialog.Builder builder=new AlertDialog.Builder(this);
-            builder.setMessage("Player O Wins").setCancelable(false).setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+            builder.setMessage("Robot Wins").setCancelable(false).setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     button1.setImageDrawable(null);
@@ -777,14 +783,15 @@ public class MainActivity extends AppCompatActivity {
             AlertDialog alertDialog=builder.create();
             alertDialog.show();
             oCount++;
-            scoreo.setText("Score Y :- "+String.valueOf(oCount));
+            scoreo.setText("Robot : "+String.valueOf(oCount));
+            return 1;
 
         }
         else  if((b3==0) && (b6==0) && (b9==0))
         {
 
             AlertDialog.Builder builder=new AlertDialog.Builder(this);
-            builder.setMessage("Player O Wins").setCancelable(false).setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+            builder.setMessage("Robot Wins").setCancelable(false).setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     button1.setImageDrawable(null);
@@ -803,14 +810,14 @@ public class MainActivity extends AppCompatActivity {
             AlertDialog alertDialog=builder.create();
             alertDialog.show();
             oCount++;
-            scoreo.setText("Score Y :- "+String.valueOf(oCount));
-
+            scoreo.setText("Robot : "+String.valueOf(oCount));
+            return 1;
         }
         else  if((b1==0) && (b5==0) && (b9==0))
         {
 
             AlertDialog.Builder builder=new AlertDialog.Builder(this);
-            builder.setMessage("Player O Wins").setCancelable(false).setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+            builder.setMessage("Robot Wins").setCancelable(false).setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     button1.setImageDrawable(null);
@@ -829,7 +836,8 @@ public class MainActivity extends AppCompatActivity {
             AlertDialog alertDialog=builder.create();
             alertDialog.show();
             oCount++;
-            scoreo.setText("Score Y :- "+String.valueOf(oCount));
+            scoreo.setText("Robot : "+String.valueOf(oCount));
+            return 1;
 
         }
 
@@ -837,7 +845,7 @@ public class MainActivity extends AppCompatActivity {
         {
 
             AlertDialog.Builder builder=new AlertDialog.Builder(this);
-            builder.setMessage("Player O Wins").setCancelable(false).setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+            builder.setMessage("Robot Wins").setCancelable(false).setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     button1.setImageDrawable(null);
@@ -856,7 +864,8 @@ public class MainActivity extends AppCompatActivity {
             AlertDialog alertDialog=builder.create();
             alertDialog.show();
             oCount++;
-            scoreo.setText("Score Y :- "+String.valueOf(oCount));
+            scoreo.setText("Robot : "+String.valueOf(oCount));
+            return 1;
 
         }
 
@@ -884,6 +893,7 @@ public class MainActivity extends AppCompatActivity {
                 AlertDialog alertDialog=builder.create();
                 alertDialog.show();
             }
+            return 0;
 
         }
 
@@ -905,217 +915,262 @@ public class MainActivity extends AppCompatActivity {
 
     private void playRobot()
     {
-        if(c1==0)
-        {
 
-            if(startGame.equals("X"))
+
+        Random rand = new Random();
+        int random = rand.nextInt(9);
+
+        if(random==0){
+            if(c1==0)
             {
 
-                button1.setImageResource(R.drawable.cross);
-                b1=1;
-                i++;
-                c1=1;
-            }
-            else
-            {
+                if(startGame.equals("X"))
+                {
 
-                button1.setImageResource(R.drawable.circle);
-                b1=0;
-                i++;
-                c1=1;
-            }
-            choosePlayer();
-            winningGame();
+                    button1.setImageResource(R.drawable.cross);
+                    b1=1;
+                    i++;
+                    c1=1;
+                }
+                else
+                {
 
+                    button1.setImageResource(R.drawable.circle);
+                    b1=0;
+                    i++;
+                    c1=1;
+                }
+                winningGame();
+                choosePlayer();
+
+            } else {
+                playRobot();
+            }
         }
-        else if(c2==0)
-        {
-
-            if(startGame.equals("X"))
+        else if(random==1){
+            if(c2==0)
             {
 
-                button2.setImageResource(R.drawable.cross);
-                b2=1;
-                i++;
-                c2=1;
-            }
-            else
-            {
+                if(startGame.equals("X"))
+                {
 
-                button2.setImageResource(R.drawable.circle);
-                b2=0;
-                i++;
-                c2=1;
-            }
-            choosePlayer();
-            winningGame();
+                    button2.setImageResource(R.drawable.cross);
+                    b2=1;
+                    i++;
+                    c2=1;
+                }
+                else
+                {
 
+                    button2.setImageResource(R.drawable.circle);
+                    b2=0;
+                    i++;
+                    c2=1;
+                }
+                winningGame();
+                choosePlayer();
+
+            } else {
+                playRobot();
+            }
         }
-        else if(c3==0)
-        {
-
-            if(startGame.equals("X"))
+        else if(random==2){
+            if(c3==0)
             {
 
-                button3.setImageResource(R.drawable.cross);
-                b3=1;
-                i++;
-                c3=1;
-            }
-            else
-            {
+                if(startGame.equals("X"))
+                {
 
-                button3.setImageResource(R.drawable.circle);
-                b3=0;
-                i++;
-                c3=1;
-            }
-            choosePlayer();
-            winningGame();
+                    button3.setImageResource(R.drawable.cross);
+                    b3=1;
+                    i++;
+                    c3=1;
+                }
+                else
+                {
 
+                    button3.setImageResource(R.drawable.circle);
+                    b3=0;
+                    i++;
+                    c3=1;
+                }
+                winningGame();
+                choosePlayer();
+
+            } else {
+                playRobot();
+            }
         }
-        else if(c4==0)
-        {
-
-            if(startGame.equals("X"))
+        else if(random==3){
+            if(c4==0)
             {
 
-                button4.setImageResource(R.drawable.cross);
-                b4=1;
-                i++;
-                c4=1;
-            }
-            else
-            {
+                if(startGame.equals("X"))
+                {
 
-                button4.setImageResource(R.drawable.circle);
-                b4=0;
-                i++;
-                c4=1;
-            }
-            choosePlayer();
-            winningGame();
+                    button4.setImageResource(R.drawable.cross);
+                    b4=1;
+                    i++;
+                    c4=1;
+                }
+                else
+                {
 
+                    button4.setImageResource(R.drawable.circle);
+                    b4=0;
+                    i++;
+                    c4=1;
+                }
+                winningGame();
+                choosePlayer();
+
+            } else {
+                playRobot();
+            }
         }
-        else if(c5==0)
-        {
-
-            if(startGame.equals("X"))
+        else if(random==4){
+            if(c5==0)
             {
 
-                button5.setImageResource(R.drawable.cross);
-                b5=1;
-                i++;
-                c5=1;
-            }
-            else
-            {
+                if(startGame.equals("X"))
+                {
 
-                button5.setImageResource(R.drawable.circle);
-                b5=0;
-                i++;
-                c5=1;
-            }
-            choosePlayer();
-            winningGame();
+                    button5.setImageResource(R.drawable.cross);
+                    b5=1;
+                    i++;
+                    c5=1;
+                }
+                else
+                {
 
+                    button5.setImageResource(R.drawable.circle);
+                    b5=0;
+                    i++;
+                    c5=1;
+                }
+                winningGame();
+                choosePlayer();
+
+            } else {
+                playRobot();
+            }
         }
-        else if(c6==0)
-        {
-
-            if(startGame.equals("X"))
+        else if(random==5){
+            if(c6==0)
             {
 
-                button6.setImageResource(R.drawable.cross);
-                b6=1;
-                i++;
-                c6=1;
-            }
-            else
-            {
+                if(startGame.equals("X"))
+                {
 
-                button6.setImageResource(R.drawable.circle);
-                b6=0;
-                i++;
-                c6=1;
-            }
-            choosePlayer();
-            winningGame();
+                    button6.setImageResource(R.drawable.cross);
+                    b6=1;
+                    i++;
+                    c6=1;
+                }
+                else
+                {
 
+                    button6.setImageResource(R.drawable.circle);
+                    b6=0;
+                    i++;
+                    c6=1;
+                }
+                winningGame();
+                choosePlayer();
+
+            } else {
+                playRobot();
+            }
         }
-        else if(c7==0)
-        {
-
-            if(startGame.equals("X"))
+        else if(random==6){
+            if(c7==0)
             {
 
-                button7.setImageResource(R.drawable.cross);
-                b7=1;
-                i++;
-                c7=1;
-            }
-            else
-            {
+                if(startGame.equals("X"))
+                {
 
-                button7.setImageResource(R.drawable.circle);
-                b7=0;
-                i++;
-                c7=1;
-            }
-            choosePlayer();
-            winningGame();
+                    button7.setImageResource(R.drawable.cross);
+                    b7=1;
+                    i++;
+                    c7=1;
+                }
+                else
+                {
 
+                    button7.setImageResource(R.drawable.circle);
+                    b7=0;
+                    i++;
+                    c7=1;
+                }
+                winningGame();
+                choosePlayer();
+
+            } else {
+                playRobot();
+            }
         }
-        else if(c8==0)
-        {
-
-            if(startGame.equals("X"))
+        else if(random==7){
+            if(c8==0)
             {
 
-                button8.setImageResource(R.drawable.cross);
-                b8=1;
-                i++;
-                c8=1;
-            }
-            else
-            {
+                if(startGame.equals("X"))
+                {
 
-                button8.setImageResource(R.drawable.circle);
-                b8=0;
-                i++;
-                c8=1;
-            }
-            choosePlayer();
-            winningGame();
+                    button8.setImageResource(R.drawable.cross);
+                    b8=1;
+                    i++;
+                    c8=1;
+                }
+                else
+                {
 
+                    button8.setImageResource(R.drawable.circle);
+                    b8=0;
+                    i++;
+                    c8=1;
+                }
+                winningGame();
+                choosePlayer();
+
+            } else {
+                playRobot();
+            }
         }
-        else if(c9==0)
-        {
-
-            if(startGame.equals("X"))
+        else if(random==8){
+            if(c9==0)
             {
 
-                button9.setImageResource(R.drawable.cross);
-                b9=1;
-                i++;
-                c9=1;
-            }
-            else
-            {
+                if(startGame.equals("X"))
+                {
 
-                button9.setImageResource(R.drawable.circle);
-                b9=0;
-                i++;
-                c9=1;
-            }
-            choosePlayer();
-            winningGame();
+                    button9.setImageResource(R.drawable.cross);
+                    b9=1;
+                    i++;
+                    c9=1;
+                }
+                else
+                {
 
+                    button9.setImageResource(R.drawable.circle);
+                    b9=0;
+                    i++;
+                    c9=1;
+                }
+                winningGame();
+                choosePlayer();
+
+            } else {
+                playRobot();
+            }
         }
-        else
-        {
+        /*else {
             Toast.makeText(MainActivity.this,"Button Already Pressed",Toast.LENGTH_SHORT).show();
-        }
+        }*/
+
+
+
+
+
     }
 
 
