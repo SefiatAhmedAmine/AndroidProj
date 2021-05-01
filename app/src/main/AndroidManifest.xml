@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Androidprj">
-        <activity android:name=".Credits"></activity>
+        <activity android:name=".MiniMaxActivity"></activity>
+        <activity android:name=".Credits" />
         <activity android:name=".HowToPlay" />
         <activity android:name=".Dashboard" />
         <activity android:name=".MainActivity" />
