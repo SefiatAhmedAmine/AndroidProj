@@ -4,7 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+<<<<<<< Updated upstream
     android:background="#343e56"
+=======
+    android:background="#FBF305"
+>>>>>>> Stashed changes
     tools:context=".MainActivity">
 
     <RelativeLayout
@@ -14,13 +18,17 @@
         android:id="@+id/btn5"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:background="#343e56">
+        android:background="#FBF305">
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+<<<<<<< Updated upstream
 
             android:id="@+id/buttonImage5">
+=======
+            android:background="#FBF305">
+>>>>>>> Stashed changes
 
         </ImageView>
 
@@ -32,13 +40,17 @@
         android:layout_centerInParent="true"
         android:id="@+id/btn4"
         android:layout_toLeftOf="@id/btn5"
-        android:background="#343e56">
+        android:background="#FBF305">
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+<<<<<<< Updated upstream
 
             android:id="@+id/buttonImage4">
+=======
+            android:background="#FBF305">
+>>>>>>> Stashed changes
 
         </ImageView>
 
@@ -49,13 +61,17 @@
         android:layout_centerInParent="true"
         android:id="@+id/btn6"
         android:layout_toRightOf="@id/btn5"
-        android:background="#343e56">
+        android:background="#FBF305">
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+<<<<<<< Updated upstream
 
             android:id="@+id/buttonImage6">
+=======
+            android:background="#FBF305">
+>>>>>>> Stashed changes
 
         </ImageView>
 
@@ -66,8 +82,13 @@
         android:layout_height="8dp"
         android:background="#F69e78"
         android:layout_centerHorizontal="true"
+<<<<<<< Updated upstream
         android:layout_above="@id/btn5"
         android:layout_marginBottom="8dp">
+=======
+        android:layout_marginBottom="8dp"
+        android:background="#000000">
+>>>>>>> Stashed changes
 
     </RelativeLayout>
 
@@ -76,8 +97,13 @@
         android:layout_height="8dp"
         android:background="#F69e78"
         android:layout_centerHorizontal="true"
+<<<<<<< Updated upstream
         android:layout_below="@id/btn5"
         android:layout_marginTop="8dp">
+=======
+        android:layout_marginTop="8dp"
+        android:background="#000000">
+>>>>>>> Stashed changes
 
     </RelativeLayout>
 
@@ -87,7 +113,11 @@
         android:background="#F69e78"
         android:layout_centerVertical="true"
         android:layout_toLeftOf="@id/btn5"
+<<<<<<< Updated upstream
         android:layout_marginRight="-14dp">
+=======
+        android:background="#000000">
+>>>>>>> Stashed changes
 
     </RelativeLayout>
 
@@ -97,7 +127,11 @@
         android:background="#F69e78"
         android:layout_centerVertical="true"
         android:layout_toRightOf="@id/btn5"
+<<<<<<< Updated upstream
         android:layout_marginLeft="-14dp">
+=======
+        android:background="#000000">
+>>>>>>> Stashed changes
 
     </RelativeLayout>
 
@@ -112,7 +146,12 @@
         android:id="@+id/Reset"
         android:textSize="15sp"
         android:textColor="@color/white"
+<<<<<<< Updated upstream
         android:backgroundTint="@color/purple_200">
+=======
+        android:textSize="15sp"
+        app:backgroundTint="#000000">
+>>>>>>> Stashed changes
 
     </Button>
 
@@ -125,13 +164,17 @@
         android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:background="#343e56">
+        android:background="#FBF305">
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+<<<<<<< Updated upstream
 
             android:id="@+id/buttonImage8">
+=======
+            android:background="#FBF305">
+>>>>>>> Stashed changes
 
         </ImageView>
 
@@ -147,13 +190,17 @@
 
         android:layout_toLeftOf="@id/btn8"
 
-        android:background="#343e56">
+        android:background="#FBF305">
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+<<<<<<< Updated upstream
 
             android:id="@+id/buttonImage7">
+=======
+            android:background="#FBF305">
+>>>>>>> Stashed changes
 
         </ImageView>
 
@@ -169,13 +216,17 @@
 
         android:layout_toRightOf="@id/btn8"
 
-        android:background="#343e56">
+        android:background="#FBF305">
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+<<<<<<< Updated upstream
 
             android:id="@+id/buttonImage9">
+=======
+            android:background="#FBF305">
+>>>>>>> Stashed changes
 
         </ImageView>
 
@@ -198,7 +249,13 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+<<<<<<< Updated upstream
             android:text="Score X :- 0"
+=======
+            android:fontFamily="@font/skranji_bold"
+            android:text="Score X : 0"
+            android:textColor="@color/black"
+>>>>>>> Stashed changes
             android:textSize="30sp"
             android:textColor="@color/white"
             android:textStyle="bold"
@@ -209,7 +266,13 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+<<<<<<< Updated upstream
             android:text="Score Y :- 0"
+=======
+            android:fontFamily="@font/skranji_bold"
+            android:text="Score Y : 0"
+            android:textColor="@color/black"
+>>>>>>> Stashed changes
             android:textSize="30sp"
             android:textColor="@color/white"
             android:textStyle="bold"
@@ -230,13 +293,22 @@
         android:layout_marginBottom="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
+<<<<<<< Updated upstream
         android:background="#343e56">
+=======
+        android:layout_marginBottom="20dp"
+        android:background="#FBF305">
+>>>>>>> Stashed changes
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+<<<<<<< Updated upstream
 
             android:id="@+id/buttonImage2">
+=======
+            android:background="#FBF305">
+>>>>>>> Stashed changes
 
         </ImageView>
 
@@ -250,13 +322,17 @@
         android:layout_above="@id/btn5"
         android:layout_marginBottom="20dp"
         android:layout_toLeftOf="@id/btn2"
-        android:background="#343e56">
+        android:background="#FBF305">
 
         <ImageView
             android:id="@+id/buttonImage1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+<<<<<<< Updated upstream
             >
+=======
+            android:background="#FBF305">
+>>>>>>> Stashed changes
 
         </ImageView>
 
@@ -271,13 +347,17 @@
         android:layout_above="@id/btn5"
         android:layout_marginBottom="20dp"
         android:layout_toRightOf="@id/btn2"
-        android:background="#343e56">
+        android:background="#FBF305">
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+<<<<<<< Updated upstream
 
             android:id="@+id/buttonImage3">
+=======
+            android:background="#FBF305">
+>>>>>>> Stashed changes
 
         </ImageView>
 

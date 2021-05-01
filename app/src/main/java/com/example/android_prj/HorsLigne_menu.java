@@ -1,11 +1,12 @@
 package com.example.android_prj;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class HorsLigne_menu extends AppCompatActivity {
 
@@ -16,7 +17,10 @@ public class HorsLigne_menu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hors_ligne_menu);
 
-        this.horsLigne = (Button) findViewById(R.id.button2);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        setContentView(R.layout.activity_hors_ligne_menu);
+
+        this.horsLigne = (Button) findViewById(R.id.button4);
 
         this.horsLigne.setOnClickListener(new View.OnClickListener() {
             @Override
