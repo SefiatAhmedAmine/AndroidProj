@@ -36,7 +36,7 @@
         android:ellipsize="marquee"
         android:fontFamily="@font/skranji_bold"
         android:includeFontPadding="false"
-        android:text="Player \nvs\nComputer "
+        android:text="Create a\ngame"
         android:textSize="20sp"
         app:backgroundTint="#000000"
         app:layout_constraintBottom_toTopOf="@+id/textView"
@@ -52,7 +52,7 @@
 
         android:fontFamily="@font/skranji_bold"
         android:includeFontPadding="true"
-        android:text="Player \nvs\nplayer "
+        android:text="Join a\ngame"
         android:textSize="20sp"
         app:backgroundTint="#000000"
         app:layout_constraintBottom_toTopOf="@+id/textView"

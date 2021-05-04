@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">android-prj</string>
+    <string name="size">110dp</string>
 </resources>

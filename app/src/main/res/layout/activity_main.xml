@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFEB3B"
-    tools:context=".MiniMaxActivity">
+    tools:context=".MainActivity">
 
     <RelativeLayout
         android:id="@+id/btn5"
@@ -200,7 +200,7 @@
 
 
         <TextView
-            android:id="@+id/scoreX"
+            android:id="@+id/ScoreX"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Score X : 0"
@@ -211,7 +211,7 @@
         </TextView>
 
         <TextView
-            android:id="@+id/scoreY"
+            android:id="@+id/ScoreY"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Score Y : 0"
@@ -290,3 +290,6 @@
 
 
 </RelativeLayout>
+
+
+
