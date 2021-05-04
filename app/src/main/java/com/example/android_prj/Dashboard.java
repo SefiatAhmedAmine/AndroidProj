@@ -37,7 +37,7 @@ public class Dashboard extends AppCompatActivity {
         this.buttonOffline.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent goToGame = new Intent(getApplicationContext(), HorsLigne_menu.class);
+                Intent goToGame = new Intent(getApplicationContext(), MiniMaxActivity.class);
                 startActivity(goToGame);
                 finish();
             }

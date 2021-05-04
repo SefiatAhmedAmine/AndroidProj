@@ -1,8 +1,6 @@
 package com.example.android_prj;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 
@@ -21,7 +19,7 @@ public class HorsLigne_menu extends AppCompatActivity {
         setContentView(R.layout.activity_hors_ligne_menu);
 
         this.horsLigne = (Button) findViewById(R.id.button4);
-
+/*
         this.horsLigne.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -29,6 +27,6 @@ public class HorsLigne_menu extends AppCompatActivity {
                 startActivity(goToGame);
                 finish();
             };
-        });
+        });*/
     }
 }
