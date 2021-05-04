@@ -19,7 +19,10 @@ public class EnLigne_menu extends AppCompatActivity {
 
         this.createGame = (Button) findViewById(R.id.button2);
         this.joinGame = (Button) findViewById(R.id.button);
-
+        /**
+         * go to a server-side activity where you gonna start a bluetooth server socket "BSS"
+         * and wait to accept a connection to start the game
+         */
         this.createGame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -27,6 +30,16 @@ public class EnLigne_menu extends AppCompatActivity {
             };
         });
 
+        /**
+         * tasks to do (we'll see how to present them in the app):
+         *  - get paired devices
+         *  - scan for available devices
+         *  - create a client-side activity where you gonna start a socket
+         *      that is gonna try to connect to the "BSS" and then play
+         *
+         * ps: it is possible that this layout (create game / join game) is gonna change
+         *      depending on how we are gonna approach the process of connection
+         */
         this.joinGame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
