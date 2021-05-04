@@ -21,12 +21,20 @@
         <activity
             android:name=".EnLigne_menu"
             android:exported="true" />
+        <activity android:name=".MiniMaxActivity"
+            android:exported="true"></activity>
+        <activity android:name=".Credits" />
+        <activity android:name=".HowToPlay" />
+        <activity android:name=".Dashboard" />
+        <activity
+            android:name=".HorsLigne_menu"
+             />
         <activity android:name=".HomePage">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
     </application>
 
