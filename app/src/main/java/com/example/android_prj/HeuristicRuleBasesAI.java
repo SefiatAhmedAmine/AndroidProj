@@ -69,8 +69,8 @@ public class HeuristicRuleBasesAI extends AppCompatActivity implements View.OnCl
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        playerOneScore = (TextView) findViewById(R.id.ScoreX);
-        playerTwoScore = (TextView) findViewById(R.id.ScoreY);
+        playerOneScore = (TextView) findViewById(R.id.scoreX);
+        playerTwoScore = (TextView) findViewById(R.id.scoreY);
         reset = (Button) findViewById(R.id.Reset);
         for (int i = 0; i < cases.length; i++){
             String caseId = "buttonImage" + (i+1);

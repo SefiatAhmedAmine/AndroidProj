@@ -1,10 +1,12 @@
 package com.example.android_prj;
 
+import android.bluetooth.BluetoothAdapter;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -14,6 +16,10 @@ public class Dashboard extends AppCompatActivity {
     private Button buttonOffline;
     private Button buttonHowtoplay;
     private Button buttonCredits;
+
+    private  Button buttonOnline;
+    private final int REQUEST_ENABLE_BT = 1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,7 +43,7 @@ public class Dashboard extends AppCompatActivity {
         this.buttonOffline.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent goToGame = new Intent(getApplicationContext(), MiniMaxActivity.class);
+                Intent goToGame = new Intent(getApplicationContext(), HorsLigne_menu.class);
                 startActivity(goToGame);
                 finish();
             }
@@ -58,6 +64,31 @@ public class Dashboard extends AppCompatActivity {
                 Intent intentCr = new Intent(getApplicationContext(), Credits.class);
                 startActivity(intentCr);
                 finish();
+            }
+        });
+
+        /**
+         * @author: amine
+         */
+        buttonOnline = (Button) findViewById(R.id.button4);
+        buttonOnline.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                BluetoothAdapter bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+                if (bluetoothAdapter == null) {
+                    // Device doesn't support Bluetooth
+                    Toast.makeText(Dashboard.this, "This device does not support BlueTooth !!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if (!bluetoothAdapter.isEnabled()) {
+                    Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
+                    startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);
+                }
+                else {
+                    Intent intent = new Intent(Dashboard.this, EnLigne_menu.class);
+                    startActivity(intent);
+                    finish();
+                }
             }
         });
 
