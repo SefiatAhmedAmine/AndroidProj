@@ -9,13 +9,13 @@ import java.util.ArrayList;
 
 public class PerfectComputerLogic extends AppCompatActivity {
 
-    private MiniMaxActivity board;
+    private robot_hard board;
     private String[] textBoard = new String[9]; // The state of the board in text form
     private static String max; // The piece computer is controlling(X or O)
     private static String min; // The piece player is controlling(X or O)
     private String level; // Current level of operation (Max or Min)
 
-    public void nextMove(final MiniMaxActivity board) {
+    public void nextMove(final robot_hard board) {
         this.board = board;
 
         if(board.playerTurn)

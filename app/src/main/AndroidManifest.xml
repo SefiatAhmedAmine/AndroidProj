@@ -20,6 +20,19 @@
             android:exported="true" />
 
         <activity
+            android:name=".Robot_levels"
+            android:exported="true" />
+        <activity
+            android:name=".robot_easy"
+            android:exported="true" />
+        <activity
+            android:name=".robot_hard"
+            android:exported="true" />
+        <activity
+            android:name=".twoplayers"
+            android:exported="true" />
+
+        <activity
             android:name=".EnLigne_menu"
             android:exported="true" />
 
