@@ -43,6 +43,9 @@ public class EnLigne_menu extends AppCompatActivity {
         this.joinGame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent listDevice = new Intent(EnLigne_menu.this, PairedDevices.class);
+                startActivity(listDevice);
+                finish();
 
             }
         });
