@@ -51,8 +51,8 @@ public class robot_easy extends AppCompatActivity {
         button8=findViewById(R.id.buttonImage8);
         button9=findViewById(R.id.buttonImage9);
 
-        scorex = findViewById(R.id.ScoreX);
-        scoreo = findViewById(R.id.ScoreY);
+        scorex = findViewById(R.id.scoreX);
+        scoreo = findViewById(R.id.scoreY);
 
         Reset=findViewById(R.id.Reset);
 
