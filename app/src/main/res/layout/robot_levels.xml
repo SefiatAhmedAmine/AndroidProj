@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FBF305"
+    tools:context=".Robot_levels">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="448dp"
+        android:layout_height="275dp"
+        android:layout_marginBottom="396dp"
+        android:src="@drawable/rsz_4logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintStart_toStartOf="parent"></ImageView>
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="176dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="112dp"
+        android:layout_marginRight="112dp"
+        android:ellipsize="marquee"
+        android:fontFamily="@font/skranji_bold"
+        android:includeFontPadding="true"
+        android:text="EASY"
+        android:textSize="20sp"
+        app:backgroundTint="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="171dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="112dp"
+        android:layout_marginRight="112dp"
+        android:fontFamily="@font/skranji_bold"
+        android:includeFontPadding="true"
+        android:text="MEDIUM"
+        android:textSize="20sp"
+        app:backgroundTint="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.091" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="174dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="148dp"
+        android:layout_marginEnd="112dp"
+        android:layout_marginRight="112dp"
+        android:fontFamily="@font/skranji_bold"
+        android:includeFontPadding="true"
+        android:text="HARD"
+        android:textSize="20sp"
+        app:backgroundTint="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.207" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
