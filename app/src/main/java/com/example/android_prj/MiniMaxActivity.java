@@ -10,8 +10,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class robot_hard extends AppCompatActivity implements View.OnClickListener{
-
+public class MiniMaxActivity extends AppCompatActivity implements View.OnClickListener{
     /**
      * author: @Aniss
      * concept: Implementation of the MiniMax Algorithm
@@ -47,7 +46,7 @@ public class robot_hard extends AppCompatActivity implements View.OnClickListene
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.robot_hard_layout);
+        setContentView(R.layout.activity_main);
 
         playerOneScore = (TextView) findViewById(R.id.scoreX);
         playerTwoScore = (TextView) findViewById(R.id.scoreY);
@@ -245,4 +244,5 @@ public class robot_hard extends AppCompatActivity implements View.OnClickListene
         playerTwoScore.setText(playerTwoScoreText.substring(0, playerTwoScoreText.length()-1) + this.playerTwoScoreCount);
 
     }
+
 }
