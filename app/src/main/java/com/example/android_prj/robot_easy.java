@@ -37,7 +37,7 @@ public class robot_easy extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.robot_easy);
         button1=findViewById(R.id.buttonImage1);
         button2=findViewById(R.id.buttonImage2);
 
@@ -51,8 +51,8 @@ public class robot_easy extends AppCompatActivity {
         button8=findViewById(R.id.buttonImage8);
         button9=findViewById(R.id.buttonImage9);
 
-        scorex = findViewById(R.id.scoreX);
-        scoreo = findViewById(R.id.scoreY);
+        scorex = findViewById(R.id.ScoreX);
+        scoreo = findViewById(R.id.ScoreY);
 
         Reset=findViewById(R.id.Reset);
 
@@ -71,8 +71,8 @@ public class robot_easy extends AppCompatActivity {
                 resetValues();
                 xCount=0;
                 oCount=0;
-                scorex.setText("Score X :- "+String.valueOf(xCount));
-                scoreo.setText("Score Y :- "+String.valueOf(oCount));
+                scorex.setText("Player : "+String.valueOf(xCount));
+                scoreo.setText("Robot  : "+String.valueOf(oCount));
             }
         });
 
