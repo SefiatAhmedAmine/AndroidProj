@@ -2,9 +2,11 @@ package com.example.android_prj;
 
 import android.os.Bundle;
 import android.view.WindowManager;
-import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.tic_tac_toe.R;
+
 
 public class HorsLigne_menu extends AppCompatActivity {
 

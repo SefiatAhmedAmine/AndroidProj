@@ -18,6 +18,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -101,6 +102,9 @@ public class TwoPlayerActivityBluetooth extends AppCompatActivity implements Vie
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_two_player_bluetooth);
 
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        setContentView(R.layout.activity_two_player_bluetooth);
+
         if (D) Log.e(TAG, "ONCREATE");
 
         mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
@@ -116,7 +120,7 @@ public class TwoPlayerActivityBluetooth extends AppCompatActivity implements Vie
 
         toolbar = (Toolbar) findViewById(R.id.options_bar);
         setTitle("Bluetooth Lobby");
-        //setSupportActionBar(toolbar);
+        setSupportActionBar(toolbar);
 
         Bundle extras = getIntent().getExtras();
 

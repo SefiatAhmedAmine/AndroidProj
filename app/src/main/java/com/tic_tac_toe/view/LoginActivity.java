@@ -7,11 +7,13 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.android_prj.Dashboard;
 import com.tic_tac_toe.R;
 
 //import com.example.minimaxtictactoe.R;
@@ -27,6 +29,9 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+       getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+       setContentView(R.layout.activity_login);
 
         twoPlayerLabel = (TextView) findViewById(R.id.two_player_label);
         optionsLabel = (TextView) findViewById(R.id.options_label);
@@ -113,16 +118,13 @@ public class LoginActivity extends AppCompatActivity {
         builder.create().show();
     }
 
-    @Override
     public void onBackPressed() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage("Are you sure you want to quit the game?")
+        builder.setMessage("Are you sure you want to quit?")
                 .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-                        Intent intent = new Intent(Intent.ACTION_MAIN);
-                        intent.addCategory(Intent.CATEGORY_HOME);
-                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                        startActivity(intent);
+                        Intent backtodash = new Intent(LoginActivity.this, Dashboard.class);
+                        startActivity(backtodash);
                     }
                 })
                 .setNegativeButton("No", new DialogInterface.OnClickListener() {
@@ -133,6 +135,8 @@ public class LoginActivity extends AppCompatActivity {
         // Create the AlertDialog object and return it
         builder.create().show();
     }
+
+
 
 
 }

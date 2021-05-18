@@ -5,6 +5,8 @@ import android.os.Handler;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.tic_tac_toe.R;
+
 import java.util.ArrayList;
 
 public class PerfectComputerLogic extends AppCompatActivity {
