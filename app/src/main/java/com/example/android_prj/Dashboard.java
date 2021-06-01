@@ -1,12 +1,14 @@
 package com.example.android_prj;
 
 import android.app.AlertDialog;
+import android.bluetooth.BluetoothAdapter;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -78,9 +80,21 @@ public class Dashboard extends AppCompatActivity {
         buttonOnline.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent goToGame = new Intent(getApplicationContext(), LoginActivity.class);
-                startActivity(goToGame);
-                finish();
+                BluetoothAdapter bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+                if (bluetoothAdapter == null) {
+                    // Device doesn't support Bluetooth
+                    Toast.makeText(Dashboard.this, "This device does not support BlueTooth !!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if (!bluetoothAdapter.isEnabled()) {
+                    Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
+                    startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);
+                }
+                else {
+                    Intent intent = new Intent(Dashboard.this, EnLigne_menu.class);
+                    startActivity(intent);
+                    finish();
+                }
             }
         });
 
