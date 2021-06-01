@@ -1,14 +1,19 @@
 package com.example.android_prj;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.tic_tac_toe.R;
 
 public class robot_hard extends AppCompatActivity implements View.OnClickListener{
 
@@ -49,6 +54,9 @@ public class robot_hard extends AppCompatActivity implements View.OnClickListene
         super.onCreate(savedInstanceState);
         setContentView(R.layout.robot_hard_layout);
 
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        setContentView(R.layout.robot_hard_layout);
+
         playerOneScore = (TextView) findViewById(R.id.scoreX);
         playerTwoScore = (TextView) findViewById(R.id.scoreY);
         reset = (Button) findViewById(R.id.Reset);
@@ -77,7 +85,7 @@ public class robot_hard extends AppCompatActivity implements View.OnClickListene
                 playerOneScoreCount = 0;
                 playerTwoScoreCount = 0;
                 updatePlayerScore();
-                //playAgain();
+                //playAgain();------
 
                 text="Player's turn";
                 System.out.println(text);
@@ -244,5 +252,22 @@ public class robot_hard extends AppCompatActivity implements View.OnClickListene
         String playerTwoScoreText = (String) playerTwoScore.getText();
         playerTwoScore.setText(playerTwoScoreText.substring(0, playerTwoScoreText.length()-1) + this.playerTwoScoreCount);
 
+    }
+    public void onBackPressed() {
+        android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(this);
+        builder.setMessage("Are you sure you want to quit?")
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        Intent backtodash = new Intent(robot_hard.this, Robot_levels.class);
+                        startActivity(backtodash);
+                    }
+                })
+                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        // User cancelled the dialog
+                    }
+                });
+        // Create the AlertDialog object and return it
+        builder.create().show();
     }
 }

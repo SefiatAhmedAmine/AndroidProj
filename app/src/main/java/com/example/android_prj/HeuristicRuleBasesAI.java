@@ -1,17 +1,20 @@
 package com.example.android_prj;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
-import android.os.CountDownTimer;
 import android.os.Handler;
 import android.util.Log;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.tic_tac_toe.R;
 
 import java.util.ArrayList;
 
@@ -68,7 +71,10 @@ public class HeuristicRuleBasesAI extends AppCompatActivity implements View.OnCl
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.robot_easy);
+        setContentView(R.layout.activity_main);
+
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        setContentView(R.layout.activity_main);
         playerOneScore = (TextView) findViewById(R.id.scoreX);
         playerTwoScore = (TextView) findViewById(R.id.scoreY);
         reset = (Button) findViewById(R.id.Reset);
@@ -390,5 +396,22 @@ public class HeuristicRuleBasesAI extends AppCompatActivity implements View.OnCl
 
 
 
+    }
+    public void onBackPressed() {
+        android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(this);
+        builder.setMessage("Are you sure you want to quit?")
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        Intent backtodash = new Intent(HeuristicRuleBasesAI.this, Robot_levels.class);
+                        startActivity(backtodash);
+                    }
+                })
+                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        // User cancelled the dialog
+                    }
+                });
+        // Create the AlertDialog object and return it
+        builder.create().show();
     }
 }

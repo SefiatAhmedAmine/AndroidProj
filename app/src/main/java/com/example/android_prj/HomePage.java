@@ -10,9 +10,11 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.tic_tac_toe.R;
+
 public class HomePage extends AppCompatActivity {
 
-    private static int SPLASH_SCREEN = 5000;
+    private static int SPLASH_SCREEN = 2500;
 
     //variables
     Animation topAnim, bottomAnim;
