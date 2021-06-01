@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FEE227"
-    tools:context=".twoplayers">
+    tools:context=".com.example.android_prj.twoplayers">
 
     <RelativeLayout
         android:layout_width="90dp"

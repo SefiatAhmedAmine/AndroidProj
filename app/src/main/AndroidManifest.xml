@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.android_prj">
+    package="com.tic_tac_toe">
 
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
@@ -13,37 +13,45 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Androidprj">
 
-
-        <activity
-            android:name=".HorsLigne_menu"
-            android:exported="true" />
-
-        <activity
-            android:name=".Robot_levels"
-            android:exported="true" />
-        <activity
-            android:name=".robot_easy"
-            android:exported="true" />
-        <activity android:name=".HeuristicRuleBasesAI"
+        <activity android:name="com.example.android_prj.HeuristicRuleBasesAI"
             android:exported="true" ></activity>
         <activity
-            android:name=".robot_hard"
-            android:exported="true" />
-        <activity
-            android:name=".twoplayers"
+            android:name="com.example.android_prj.HorsLigne_menu"
             android:exported="true" />
 
         <activity
-            android:name=".EnLigne_menu"
+            android:name="com.example.android_prj.EnLigne_menu"
             android:exported="true" />
 
+        <activity
+            android:name="com.example.android_prj.twoplayers"
+            android:exported="true" />
 
+        <activity
+            android:name="com.example.android_prj.Robot_levels"
+            android:exported="true" />
 
-        <activity android:name=".Credits" />
-        <activity android:name=".HowToPlay" />
-        <activity android:name=".Dashboard" />
+        <activity
+            android:name="com.example.android_prj.robot_easy"
+            android:exported="true" />
 
-        <activity android:name=".HomePage">
+        <activity
+            android:name="com.example.android_prj.robot_hard"
+            android:exported="true" />
+
+        <activity android:name="com.example.android_prj.MiniMaxActivity"
+            android:exported="true"></activity>
+
+        <activity android:name="com.example.android_prj.Credits" />
+        <activity android:name="com.example.android_prj.HowToPlay" />
+        <activity android:name="com.example.android_prj.Dashboard" />
+
+        <activity android:name="com.tic_tac_toe.view.TwoPlayerActivityBluetooth"></activity>
+        <activity android:name="com.tic_tac_toe.control.DeviceListActivity" />
+        <activity android:name="com.tic_tac_toe.view.LoginActivity" android:exported="true"/>
+        <activity android:name="com.example.android_prj.PerfectComputerLogic" />
+
+        <activity android:name="com.example.android_prj.HomePage">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
