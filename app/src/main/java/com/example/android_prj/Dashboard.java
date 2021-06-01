@@ -87,12 +87,13 @@ public class Dashboard extends AppCompatActivity {
                     return;
                 }
                 if (!bluetoothAdapter.isEnabled()) {
+                    // if blueTooth is not activated
                     Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
                     startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);
                 }
                 else {
-                    Intent intent = new Intent(Dashboard.this, EnLigne_menu.class);
-                    startActivity(intent);
+                    Intent goToGame = new Intent(getApplicationContext(), LoginActivity.class);
+                    startActivity(goToGame);
                     finish();
                 }
             }
